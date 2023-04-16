@@ -32,7 +32,7 @@ import bodyParser from 'body-parser';
 
 //async function main(){
     const app = express()
-    const port = 8080;
+    const port = process.env.PORT || 8080;
     const __dirname = dirname(fileURLToPath(import.meta.url));
 
     //logging morgan
