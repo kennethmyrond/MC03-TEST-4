@@ -4,12 +4,10 @@ const authRoute = express.Router()
 
 //this is for login with google
 
-authRoute.get('/login', (req, res)=>{
-    res.render('login');
-})
+
 authRoute.get('/google', passport.authenticate('google', { scope: ['profile'] }))
 
-authRoute.get('/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), (req,res) =>{
+authRoute.get('auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), (req,res) =>{
     res.redirect('/home')
 })
 
