@@ -5,7 +5,7 @@ const authRoute = express.Router()
 //this is for login with google
 
 authRoute.get('/login', (req, res)=>{
-    res.render('login');ß
+    res.render('login');
 })
 authRoute.get('/google', passport.authenticate('google', { scope: ['profile'] }))
 
