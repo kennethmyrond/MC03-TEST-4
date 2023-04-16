@@ -1,8 +1,8 @@
 //const passport = require('passport');
-//const GoogleStrategy = require('passport-google-oauth20').Strategy;
+//const GoogleStrategy = require('passport-google-oauth2').Strategy;
 
 //import { MongoCredentials } from 'mongodb'
-import mongoose from 'mongoose'
+
 import GoogleStrategy from 'passport-google-oauth2'
 import User from '../src/models/User.js'
 

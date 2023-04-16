@@ -3,6 +3,10 @@ import passport from 'passport'
 const authRoute = express.Router()
 
 //this is for login with google
+
+authRoute.get('/login', (req, res)=>{
+    res.render('login');ß
+})
 authRoute.get('/google', passport.authenticate('google', { scope: ['profile'] }))
 
 authRoute.get('/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), (req,res) =>{
